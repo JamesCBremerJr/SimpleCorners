@@ -515,12 +515,12 @@ double precision, allocatable :: xs(:),whts(:)
 double precision, allocatable :: xslege(:),whtslege(:),ab(:,:)
 double precision, allocatable :: ab0(:,:),xs0(:),whts0(:)
 
-k      = 30
-dsub   = 3.0d0
-dd     = 2.0d0
+k      = 20
+dsub   = 6.0d0
+dd     = 3.5d0
 rad    = 0.1d0
-nints0 = 20
-nints1 = 4
+nints0 = 3
+nints1 = 2
 
 call legequad(k,xslege,whtslege)
 allocate(ab0(2,nints0+nints1), xs0(k*nints0+k*nints1), whts0(k*nints0+k*nints1))

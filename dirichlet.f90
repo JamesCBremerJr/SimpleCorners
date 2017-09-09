@@ -507,11 +507,11 @@ double precision, allocatable :: xs(:),whts(:)
 double precision, allocatable :: xslege(:),whtslege(:),ab(:,:)
 double precision, allocatable :: ab0(:,:),xs0(:),whts0(:)
 
-k      = 30
+k      = 24
 dsub   = 2.0d0
-dd     = 2.0d0
+dd     = 3.5d0
 rad    = 0.1d0
-nints0 = 12
+nints0 = 6
 nints1 = 2
 
 call legequad(k,xslege,whtslege)
@@ -598,8 +598,8 @@ double precision, allocatable :: xslege(:),whtslege(:)
 
 
 pi      = acos(-1.0d0)
-theta   = 0.11781222d0 * pi
-!theta   = 0.25164815d0 * pi
+!theta   = 0.11781222d0 * pi
+theta   = 0.25164815d0 * pi
 beta    = tan(theta/2)
 ifscale = 1
 
