@@ -507,12 +507,12 @@ double precision, allocatable :: xs(:),whts(:)
 double precision, allocatable :: xslege(:),whtslege(:),ab(:,:)
 double precision, allocatable :: ab0(:,:),xs0(:),whts0(:)
 
-k      = 24
+k      = 20
 dsub   = 2.0d0
-dd     = 3.5d0
+dd     = 2.0d0
 rad    = 0.1d0
-nints0 = 6
-nints1 = 2
+nints0 = 20
+nints1 = 5
 
 call legequad(k,xslege,whtslege)
 allocate(ab0(2,nints0+nints1), xs0(k*nints0+k*nints1), whts0(k*nints0+k*nints1))
@@ -598,11 +598,11 @@ double precision, allocatable :: xslege(:),whtslege(:)
 
 
 pi      = acos(-1.0d0)
-!theta   = 0.11781222d0 * pi
-theta   = 0.25164815d0 * pi
+theta   = 0.11781222d0 * pi
+!theta   = 0.25164815d0 * pi
+theta   = pi/2
 beta    = tan(theta/2)
 ifscale = 1
-
 !
 !  Construct a quadrature on the interval [-pi,pi] to use in the discretization
 !  of the integral operator
@@ -705,11 +705,11 @@ endif
 deallocate(bmatr)
 
 !
-!  Evaluate the resulting potential at the point (0.1,0) and compare
+!  Evaluate the resulting potential at the point (0.5,0) and compare
 !  the result to the known value of the potential
 !
 
-x0   = 0.1d0
+x0   = 0.5d0
 y0   = 0.0d0
 dsum = 0.0d0
 
@@ -735,8 +735,8 @@ end do
 dsum = dsum / (2*pi)
 call potential(x0,y0,dsum0)
 
-print *,"true value of potential at (0,1/10)     = ",dsum
-print *,"computed value of potential at (0,1/10) = ",dsum0
+print *,"true value of potential at (0,5/10)     = ",dsum
+print *,"computed value of potential at (0,5/10) = ",dsum0
 print *,"relative error                          = ",abs(dsum-dsum0)/abs(dsum0)
 
 end program
