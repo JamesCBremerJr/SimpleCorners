@@ -76,19 +76,19 @@ implicit double precision (a-h,o-z)
 val = 0
 
 if (s .lt. 0 .AND. t .gt. 0) then
-val = (beta*Cos((s-0.1q1*t)/0.4q1)**2*(-0.2q1*Sin(s/0.2q1)+Sin(s+t/0.2q1)+  &
-Sin(t/0.2q1)))/(0.2q1*Pi*(Sin(s/0.2q1)**2+beta**2*Sin(s)**2+  &
-0.2q1*Sin(s/0.2q1)*Sin(t/0.2q1)+Sin(t/0.2q1)**2-  &
-0.2q1*beta**2*Sin(s)*Sin(t)+beta**2*Sin(t)**2))
+val = (beta*Cos((s-0.1d1*t)/0.4d1)**2*(-0.2d1*Sin(s/0.2d1)+Sin(s+t/0.2d1)+  &
+Sin(t/0.2d1)))/(0.2d1*Pi*(Sin(s/0.2d1)**2+beta**2*Sin(s)**2+  &
+0.2d1*Sin(s/0.2d1)*Sin(t/0.2d1)+Sin(t/0.2d1)**2-  &
+0.2d1*beta**2*Sin(s)*Sin(t)+beta**2*Sin(t)**2))
 return
 endif
 
 
 if (s .gt. 0 .AND. t .lt. 0) then
-val = -(beta*Cos((s-0.1q1*t)/0.4q1)**2*(-0.2q1*Sin(s/0.2q1)+Sin(s+t/0.2q1)+&
-Sin(t/0.2q1)))/(0.2q1*Pi*(Sin(s/0.2q1)**2+beta**2*Sin(s)**2+  &
-0.2q1*Sin(s/0.2q1)*Sin(t/0.2q1)+Sin(t/0.2q1)**2-  &
-0.2q1*beta**2*Sin(s)*Sin(t)+beta**2*Sin(t)**2))
+val = -(beta*Cos((s-0.1d1*t)/0.4d1)**2*(-0.2d1*Sin(s/0.2d1)+Sin(s+t/0.2d1)+&
+Sin(t/0.2d1)))/(0.2d1*Pi*(Sin(s/0.2d1)**2+beta**2*Sin(s)**2+  &
+0.2d1*Sin(s/0.2d1)*Sin(t/0.2d1)+Sin(t/0.2d1)**2-  &
+0.2d1*beta**2*Sin(s)*Sin(t)+beta**2*Sin(t)**2))
 return
 endif
 
@@ -101,85 +101,85 @@ if (s .gt. 0 .AND. t .gt. 0) then
 
 if (s .lt. 1.0d-3 .AND. t .lt. 1.0d-3) then
 delta = t-s
-val   = (beta*delta)/(0.32q2*(0.25q0+beta**2)*Pi)+(beta*(1+  &
-0.52q2*beta**2)*delta**3)/(0.384q3*(1+0.4q1*beta**2)**2*Pi)+(beta*(1- &
-0.112q3*beta**2+0.1456q4*beta**4)*delta**5)/(0.1536q5*(1+  &
-0.4q1*beta**2)**3*Pi)+((3*beta)/(0.32q2*(0.25q0+beta**2)*Pi)+(3*(beta+ &
-0.36q2*beta**3)*delta**2)/(0.128q3*(1+0.4q1*beta**2)**2*Pi)+((beta-  &
-0.48q2*beta**3+0.944q3*beta**5)*delta**4)/(0.1024q4*(1+  &
-0.4q1*beta**2)**3*Pi))*s+((3*(beta+0.36q2*beta**3)*delta)/(0.64q2*(1+ &
-0.4q1*beta**2)**2*Pi)+((0.5q1*beta-0.12q3*beta**3+  &
-0.3664q4*beta**5)*delta**3)/(0.1024q4*(1+0.4q1*beta**2)**3*Pi)+  &
-((0.11q2*beta+0.244q3*beta**3-0.36016q5*beta**5+  &
-0.175296q6*beta**7)*delta**5)/(0.4096q5*(1+0.4q1*beta**2)**4*Pi))*s**2  &
-+((beta+0.76q2*beta**3)/(0.64q2*(1+0.4q1*beta**2)**2*Pi)+((0.11q2*beta  &
--0.168q3*beta**3+0.7216q4*beta**5)*delta**2)/(0.1024q4*(1+  &
-0.4q1*beta**2)**3*Pi)+((0.13q2*beta+0.162q3*beta**3-0.29568q5*beta**5+&
-0.170272q6*beta**7)*delta**4)/(0.12288q5*(1+  &
-0.4q1*beta**2)**4*Pi))*s**3+(((0.11q2*beta-0.168q3*beta**3+  &
-0.7216q4*beta**5)*delta)/(0.1024q4*(1+0.4q1*beta**2)**3*Pi)+  &
-((0.115q3*beta+0.98q3*beta**3-0.20312q6*beta**5+  &
-0.1335744q7*beta**7)*delta**3)/(0.49152q5*(1+0.4q1*beta**2)**4*Pi)+  &
-((0.451q3*beta-0.356q4*beta**3+0.771648q6*beta**5-0.3966656q8*beta**7+&
-0.100700416q9*beta**9)*delta**5)/(0.196608q7*(1+  &
-0.4q1*beta**2)**5*Pi))*s**4+((3*beta*(7-0.184q3*beta**2+  &
-0.4912q4*beta**4))/(0.512q4*(1+0.4q1*beta**2)**3*Pi)+((0.241q3*beta+  &
-0.1644q4*beta**3-0.372816q6*beta**5+  &
-0.2645056q7*beta**7)*delta**2)/(0.8192q5*(1+0.4q1*beta**2)**4*Pi)+  &
-((0.991q3*beta-0.936q4*beta**3+0.923616q6*beta**5-0.71119616q8*beta**7  &
-+0.197554944q9*beta**9)*delta**4)/(0.196608q7*(1+  &
-0.4q1*beta**2)**5*Pi))*s**5
+val   = (beta*delta)/(0.32d2*(0.25d0+beta**2)*Pi)+(beta*(1+  &
+0.52d2*beta**2)*delta**3)/(0.384d3*(1+0.4d1*beta**2)**2*Pi)+(beta*(1- &
+0.112d3*beta**2+0.1456d4*beta**4)*delta**5)/(0.1536d5*(1+  &
+0.4d1*beta**2)**3*Pi)+((3*beta)/(0.32d2*(0.25d0+beta**2)*Pi)+(3*(beta+ &
+0.36d2*beta**3)*delta**2)/(0.128d3*(1+0.4d1*beta**2)**2*Pi)+((beta-  &
+0.48d2*beta**3+0.944d3*beta**5)*delta**4)/(0.1024d4*(1+  &
+0.4d1*beta**2)**3*Pi))*s+((3*(beta+0.36d2*beta**3)*delta)/(0.64d2*(1+ &
+0.4d1*beta**2)**2*Pi)+((0.5d1*beta-0.12d3*beta**3+  &
+0.3664d4*beta**5)*delta**3)/(0.1024d4*(1+0.4d1*beta**2)**3*Pi)+  &
+((0.11d2*beta+0.244d3*beta**3-0.36016d5*beta**5+  &
+0.175296d6*beta**7)*delta**5)/(0.4096d5*(1+0.4d1*beta**2)**4*Pi))*s**2  &
++((beta+0.76d2*beta**3)/(0.64d2*(1+0.4d1*beta**2)**2*Pi)+((0.11d2*beta  &
+-0.168d3*beta**3+0.7216d4*beta**5)*delta**2)/(0.1024d4*(1+  &
+0.4d1*beta**2)**3*Pi)+((0.13d2*beta+0.162d3*beta**3-0.29568d5*beta**5+&
+0.170272d6*beta**7)*delta**4)/(0.12288d5*(1+  &
+0.4d1*beta**2)**4*Pi))*s**3+(((0.11d2*beta-0.168d3*beta**3+  &
+0.7216d4*beta**5)*delta)/(0.1024d4*(1+0.4d1*beta**2)**3*Pi)+  &
+((0.115d3*beta+0.98d3*beta**3-0.20312d6*beta**5+  &
+0.1335744d7*beta**7)*delta**3)/(0.49152d5*(1+0.4d1*beta**2)**4*Pi)+  &
+((0.451d3*beta-0.356d4*beta**3+0.771648d6*beta**5-0.3966656d8*beta**7+&
+0.100700416d9*beta**9)*delta**5)/(0.196608d7*(1+  &
+0.4d1*beta**2)**5*Pi))*s**4+((3*beta*(7-0.184d3*beta**2+  &
+0.4912d4*beta**4))/(0.512d4*(1+0.4d1*beta**2)**3*Pi)+((0.241d3*beta+  &
+0.1644d4*beta**3-0.372816d6*beta**5+  &
+0.2645056d7*beta**7)*delta**2)/(0.8192d5*(1+0.4d1*beta**2)**4*Pi)+  &
+((0.991d3*beta-0.936d4*beta**3+0.923616d6*beta**5-0.71119616d8*beta**7  &
++0.197554944d9*beta**9)*delta**4)/(0.196608d7*(1+  &
+0.4d1*beta**2)**5*Pi))*s**5
 return
 endif
 
 if ( abs(t-s) .lt. 1.0d-3) then
 delta = t-s
-val   = (beta*(Sin(s/0.2q1)+Cos(s/0.2q1)*Sin(s)))/(0.4q1*Pi*(Cos(s/0.2q1)**2+&
-0.4q1*beta**2*Cos(s)**2))+  &
-(beta*delta*((Cos(s/0.2q1)*Cos(s))/(0.8q1*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2))+((Sin(s/0.2q1)+  &
-Cos(s/0.2q1)*Sin(s))*(Cos(s/0.2q1)*Sin(s/0.2q1)+  &
-0.8q1*beta**2*Cos(s)*Sin(s)))/(0.8q1*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**2)))/Pi+  &
-(beta*delta**2*((Cos(s/0.2q1)*Cos(s)*(Cos(s/0.2q1)*Sin(s/0.2q1)+  &
-0.8q1*beta**2*Cos(s)*Sin(s)))/(0.16q2*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**2)+((Sin(s/0.2q1)+  &
-Cos(s/0.2q1)*Sin(s))*(0.4q1*Cos(s/0.2q1)**4+  &
-0.8q2*beta**2*Cos(s/0.2q1)**2*Cos(s)**2+0.256q3*beta**4*Cos(s)**4+  &
-0.9q1*Cos(s/0.2q1)**2*Sin(s/0.2q1)**2-  &
-0.12q2*beta**2*Cos(s)**2*Sin(s/0.2q1)**2+  &
-0.192q3*beta**2*Cos(s/0.2q1)*Cos(s)*Sin(s/0.2q1)*Sin(s)-  &
-0.48q2*beta**2*Cos(s/0.2q1)**2*Sin(s)**2+  &
-0.576q3*beta**4*Cos(s)**2*Sin(s)**2))/(0.192q3*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**3)+(0.4q1*(-(Cos(s/0.2q1)*Sin(s))/0.128q3+  &
-(-Sin(s/0.2q1)-Cos(s/0.2q1)*Sin(s))/0.768q3))/(Cos(s/0.2q1)**2+  &
+val   = (beta*(Sin(s/0.2d1)+Cos(s/0.2d1)*Sin(s)))/(0.4d1*Pi*(Cos(s/0.2d1)**2+&
+0.4d1*beta**2*Cos(s)**2))+  &
+(beta*delta*((Cos(s/0.2d1)*Cos(s))/(0.8d1*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2))+((Sin(s/0.2d1)+  &
+Cos(s/0.2d1)*Sin(s))*(Cos(s/0.2d1)*Sin(s/0.2d1)+  &
+0.8d1*beta**2*Cos(s)*Sin(s)))/(0.8d1*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**2)))/Pi+  &
+(beta*delta**2*((Cos(s/0.2d1)*Cos(s)*(Cos(s/0.2d1)*Sin(s/0.2d1)+  &
+0.8d1*beta**2*Cos(s)*Sin(s)))/(0.16d2*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**2)+((Sin(s/0.2d1)+  &
+Cos(s/0.2d1)*Sin(s))*(0.4d1*Cos(s/0.2d1)**4+  &
+0.8d2*beta**2*Cos(s/0.2d1)**2*Cos(s)**2+0.256d3*beta**4*Cos(s)**4+  &
+0.9d1*Cos(s/0.2d1)**2*Sin(s/0.2d1)**2-  &
+0.12d2*beta**2*Cos(s)**2*Sin(s/0.2d1)**2+  &
+0.192d3*beta**2*Cos(s/0.2d1)*Cos(s)*Sin(s/0.2d1)*Sin(s)-  &
+0.48d2*beta**2*Cos(s/0.2d1)**2*Sin(s)**2+  &
+0.576d3*beta**4*Cos(s)**2*Sin(s)**2))/(0.192d3*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**3)+(0.4d1*(-(Cos(s/0.2d1)*Sin(s))/0.128d3+  &
+(-Sin(s/0.2d1)-Cos(s/0.2d1)*Sin(s))/0.768d3))/(Cos(s/0.2d1)**2+  &
 4*beta**2*Cos(s)**2)))/Pi+  &
-(beta*delta**3*(-(Cos(s/0.2q1)*Cos(s))/(0.128q3*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2))+(Cos(s/0.2q1)*Cos(s)*(0.4q1*Cos(s/0.2q1)**4+&
-0.8q2*beta**2*Cos(s/0.2q1)**2*Cos(s)**2+0.256q3*beta**4*Cos(s)**4+  &
-0.9q1*Cos(s/0.2q1)**2*Sin(s/0.2q1)**2-  &
-0.12q2*beta**2*Cos(s)**2*Sin(s/0.2q1)**2+  &
-0.192q3*beta**2*Cos(s/0.2q1)*Cos(s)*Sin(s/0.2q1)*Sin(s)-  &
-0.48q2*beta**2*Cos(s/0.2q1)**2*Sin(s)**2+  &
-0.576q3*beta**4*Cos(s)**2*Sin(s)**2))/(0.384q3*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**3)+((Sin(s/0.2q1)+  &
-Cos(s/0.2q1)*Sin(s))*(0.5q1*Cos(s/0.2q1)**5*Sin(s/0.2q1)+  &
-0.136q3*beta**2*Cos(s/0.2q1)**3*Cos(s)**2*Sin(s/0.2q1)+  &
-0.464q3*beta**4*Cos(s/0.2q1)*Cos(s)**4*Sin(s/0.2q1)+  &
-0.6q1*Cos(s/0.2q1)**3*Sin(s/0.2q1)**3-  &
-0.24q2*beta**2*Cos(s/0.2q1)*Cos(s)**2*Sin(s/0.2q1)**3-  &
-0.32q2*beta**2*Cos(s/0.2q1)**4*Cos(s)*Sin(s)+  &
-0.512q3*beta**4*Cos(s/0.2q1)**2*Cos(s)**3*Sin(s)+  &
-0.256q4*beta**6*Cos(s)**5*Sin(s)+  &
-0.24q3*beta**2*Cos(s/0.2q1)**2*Cos(s)*Sin(s/0.2q1)**2*Sin(s)-  &
-0.192q3*beta**4*Cos(s)**3*Sin(s/0.2q1)**2*Sin(s)-  &
-0.96q2*beta**2*Cos(s/0.2q1)**3*Sin(s/0.2q1)*Sin(s)**2+  &
-0.192q4*beta**4*Cos(s/0.2q1)*Cos(s)**2*Sin(s/0.2q1)*Sin(s)**2-  &
-0.768q3*beta**4*Cos(s/0.2q1)**2*Cos(s)*Sin(s)**3+  &
-0.3072q4*beta**6*Cos(s)**3*Sin(s)**3))/(0.384q3*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**4)+(0.2q1*(Cos(s/0.2q1)*Sin(s/0.2q1)+  &
-8*beta**2*Cos(s)*Sin(s))*(-(Cos(s/0.2q1)*Sin(s))/0.128q3+  &
-(-Sin(s/0.2q1)-Cos(s/0.2q1)*Sin(s))/0.768q3))/(Cos(s/0.2q1)**2+  &
+(beta*delta**3*(-(Cos(s/0.2d1)*Cos(s))/(0.128d3*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2))+(Cos(s/0.2d1)*Cos(s)*(0.4d1*Cos(s/0.2d1)**4+&
+0.8d2*beta**2*Cos(s/0.2d1)**2*Cos(s)**2+0.256d3*beta**4*Cos(s)**4+  &
+0.9d1*Cos(s/0.2d1)**2*Sin(s/0.2d1)**2-  &
+0.12d2*beta**2*Cos(s)**2*Sin(s/0.2d1)**2+  &
+0.192d3*beta**2*Cos(s/0.2d1)*Cos(s)*Sin(s/0.2d1)*Sin(s)-  &
+0.48d2*beta**2*Cos(s/0.2d1)**2*Sin(s)**2+  &
+0.576d3*beta**4*Cos(s)**2*Sin(s)**2))/(0.384d3*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**3)+((Sin(s/0.2d1)+  &
+Cos(s/0.2d1)*Sin(s))*(0.5d1*Cos(s/0.2d1)**5*Sin(s/0.2d1)+  &
+0.136d3*beta**2*Cos(s/0.2d1)**3*Cos(s)**2*Sin(s/0.2d1)+  &
+0.464d3*beta**4*Cos(s/0.2d1)*Cos(s)**4*Sin(s/0.2d1)+  &
+0.6d1*Cos(s/0.2d1)**3*Sin(s/0.2d1)**3-  &
+0.24d2*beta**2*Cos(s/0.2d1)*Cos(s)**2*Sin(s/0.2d1)**3-  &
+0.32d2*beta**2*Cos(s/0.2d1)**4*Cos(s)*Sin(s)+  &
+0.512d3*beta**4*Cos(s/0.2d1)**2*Cos(s)**3*Sin(s)+  &
+0.256d4*beta**6*Cos(s)**5*Sin(s)+  &
+0.24d3*beta**2*Cos(s/0.2d1)**2*Cos(s)*Sin(s/0.2d1)**2*Sin(s)-  &
+0.192d3*beta**4*Cos(s)**3*Sin(s/0.2d1)**2*Sin(s)-  &
+0.96d2*beta**2*Cos(s/0.2d1)**3*Sin(s/0.2d1)*Sin(s)**2+  &
+0.192d4*beta**4*Cos(s/0.2d1)*Cos(s)**2*Sin(s/0.2d1)*Sin(s)**2-  &
+0.768d3*beta**4*Cos(s/0.2d1)**2*Cos(s)*Sin(s)**3+  &
+0.3072d4*beta**6*Cos(s)**3*Sin(s)**3))/(0.384d3*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**4)+(0.2d1*(Cos(s/0.2d1)*Sin(s/0.2d1)+  &
+8*beta**2*Cos(s)*Sin(s))*(-(Cos(s/0.2d1)*Sin(s))/0.128d3+  &
+(-Sin(s/0.2d1)-Cos(s/0.2d1)*Sin(s))/0.768d3))/(Cos(s/0.2d1)**2+  &
 4*beta**2*Cos(s)**2)**2))/Pi
 
 return
@@ -190,10 +190,10 @@ endif
 !  Otherwise
 !
 
-val = (beta*Sin((s-0.1q1*t)/0.4q1)**2*(0.2q1*Sin(s/0.2q1)+Sin(s+t/0.2q1)+  &
-Sin(t/0.2q1)))/(0.2q1*Pi*(Sin(s/0.2q1)**2+beta**2*Sin(s)**2-  &
-0.2q1*Sin(s/0.2q1)*Sin(t/0.2q1)+Sin(t/0.2q1)**2-  &
-0.2q1*beta**2*Sin(s)*Sin(t)+beta**2*Sin(t)**2))
+val = (beta*Sin((s-0.1d1*t)/0.4d1)**2*(0.2d1*Sin(s/0.2d1)+Sin(s+t/0.2d1)+  &
+Sin(t/0.2d1)))/(0.2d1*Pi*(Sin(s/0.2d1)**2+beta**2*Sin(s)**2-  &
+0.2d1*Sin(s/0.2d1)*Sin(t/0.2d1)+Sin(t/0.2d1)**2-  &
+0.2d1*beta**2*Sin(s)*Sin(t)+beta**2*Sin(t)**2))
 
 return
 endif
@@ -207,85 +207,85 @@ endif
 
 if (s .gt. -1.0d-3 .AND. t .gt. -1.0d-3) then
 delta = t-s
-val   = -(beta*delta)/(0.32q2*(0.25q0+beta**2)*Pi)-(beta*(1+  &
-0.52q2*beta**2)*delta**3)/(0.384q3*(1+0.4q1*beta**2)**2*Pi)-(beta*(1- &
-0.112q3*beta**2+0.1456q4*beta**4)*delta**5)/(0.1536q5*(1+  &
-0.4q1*beta**2)**3*Pi)+((-3*beta)/(0.8q1*(1+0.4q1*beta**2)*Pi)-(3*(beta  &
-+0.36q2*beta**3)*delta**2)/(0.128q3*(1+0.4q1*beta**2)**2*Pi)+  &
-((-0.1q1*beta+0.48q2*beta**3-0.944q3*beta**5)*delta**4)/(0.1024q4*(1+ &
-0.4q1*beta**2)**3*Pi))*s+((-3*beta*(1+  &
-0.36q2*beta**2)*delta)/(0.64q2*(1+0.4q1*beta**2)**2*Pi)-(beta*(5-  &
-0.12q3*beta**2+0.3664q4*beta**4)*delta**3)/(0.1024q4*(1+  &
-0.4q1*beta**2)**3*Pi)-(beta*(11+0.244q3*beta**2-0.36016q5*beta**4+  &
-0.175296q6*beta**6)*delta**5)/(0.4096q5*(1+0.4q1*beta**2)**4*Pi))*s**2  &
-+((beta*(-1-0.76q2*beta**2))/(0.64q2*(1+0.4q1*beta**2)**2*Pi)-  &
-(beta*(11-0.168q3*beta**2+0.7216q4*beta**4)*delta**2)/(0.1024q4*(1+  &
-0.4q1*beta**2)**3*Pi)-(beta*(13+0.162q3*beta**2-0.29568q5*beta**4+  &
-0.170272q6*beta**6)*delta**4)/(0.12288q5*(1+  &
-0.4q1*beta**2)**4*Pi))*s**3+((beta*(-11+0.168q3*beta**2-  &
-0.7216q4*beta**4)*delta)/(0.1024q4*(1+0.4q1*beta**2)**3*Pi)-(beta*(115  &
-+0.98q3*beta**2-0.20312q6*beta**4+  &
-0.1335744q7*beta**6)*delta**3)/(0.49152q5*(1+0.4q1*beta**2)**4*Pi)-  &
-(beta*(451-0.356q4*beta**2+0.771648q6*beta**4-0.3966656q8*beta**6+  &
-0.100700416q9*beta**8)*delta**5)/(0.196608q7*(1+  &
-0.4q1*beta**2)**5*Pi))*s**4+((-3*beta*(7-0.184q3*beta**2+  &
-0.4912q4*beta**4))/(0.512q4*(1+0.4q1*beta**2)**3*Pi)-(beta*(241+  &
-0.1644q4*beta**2-0.372816q6*beta**4+  &
-0.2645056q7*beta**6)*delta**2)/(0.8192q5*(1+0.4q1*beta**2)**4*Pi)-  &
-(beta*(991-0.936q4*beta**2+0.923616q6*beta**4-0.71119616q8*beta**6+  &
-0.197554944q9*beta**8)*delta**4)/(0.196608q7*(1+  &
-0.4q1*beta**2)**5*Pi))*s**5
+val   = -(beta*delta)/(0.32d2*(0.25d0+beta**2)*Pi)-(beta*(1+  &
+0.52d2*beta**2)*delta**3)/(0.384d3*(1+0.4d1*beta**2)**2*Pi)-(beta*(1- &
+0.112d3*beta**2+0.1456d4*beta**4)*delta**5)/(0.1536d5*(1+  &
+0.4d1*beta**2)**3*Pi)+((-3*beta)/(0.8d1*(1+0.4d1*beta**2)*Pi)-(3*(beta  &
++0.36d2*beta**3)*delta**2)/(0.128d3*(1+0.4d1*beta**2)**2*Pi)+  &
+((-0.1d1*beta+0.48d2*beta**3-0.944d3*beta**5)*delta**4)/(0.1024d4*(1+ &
+0.4d1*beta**2)**3*Pi))*s+((-3*beta*(1+  &
+0.36d2*beta**2)*delta)/(0.64d2*(1+0.4d1*beta**2)**2*Pi)-(beta*(5-  &
+0.12d3*beta**2+0.3664d4*beta**4)*delta**3)/(0.1024d4*(1+  &
+0.4d1*beta**2)**3*Pi)-(beta*(11+0.244d3*beta**2-0.36016d5*beta**4+  &
+0.175296d6*beta**6)*delta**5)/(0.4096d5*(1+0.4d1*beta**2)**4*Pi))*s**2  &
++((beta*(-1-0.76d2*beta**2))/(0.64d2*(1+0.4d1*beta**2)**2*Pi)-  &
+(beta*(11-0.168d3*beta**2+0.7216d4*beta**4)*delta**2)/(0.1024d4*(1+  &
+0.4d1*beta**2)**3*Pi)-(beta*(13+0.162d3*beta**2-0.29568d5*beta**4+  &
+0.170272d6*beta**6)*delta**4)/(0.12288d5*(1+  &
+0.4d1*beta**2)**4*Pi))*s**3+((beta*(-11+0.168d3*beta**2-  &
+0.7216d4*beta**4)*delta)/(0.1024d4*(1+0.4d1*beta**2)**3*Pi)-(beta*(115  &
++0.98d3*beta**2-0.20312d6*beta**4+  &
+0.1335744d7*beta**6)*delta**3)/(0.49152d5*(1+0.4d1*beta**2)**4*Pi)-  &
+(beta*(451-0.356d4*beta**2+0.771648d6*beta**4-0.3966656d8*beta**6+  &
+0.100700416d9*beta**8)*delta**5)/(0.196608d7*(1+  &
+0.4d1*beta**2)**5*Pi))*s**4+((-3*beta*(7-0.184d3*beta**2+  &
+0.4912d4*beta**4))/(0.512d4*(1+0.4d1*beta**2)**3*Pi)-(beta*(241+  &
+0.1644d4*beta**2-0.372816d6*beta**4+  &
+0.2645056d7*beta**6)*delta**2)/(0.8192d5*(1+0.4d1*beta**2)**4*Pi)-  &
+(beta*(991-0.936d4*beta**2+0.923616d6*beta**4-0.71119616d8*beta**6+  &
+0.197554944d9*beta**8)*delta**4)/(0.196608d7*(1+  &
+0.4d1*beta**2)**5*Pi))*s**5
 return
 endif
 
 if ( abs(t-s) .lt. 1.0d-3) then
 delta = t-s
-val   = -(beta*(Sin(s/0.2q1)+Cos(s/0.2q1)*Sin(s)))/(0.4q1*Pi*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2))+  &
-(beta*delta*(-(Cos(s/0.2q1)*Cos(s))/(0.8q1*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2))-((Sin(s/0.2q1)+  &
-Cos(s/0.2q1)*Sin(s))*(Cos(s/0.2q1)*Sin(s/0.2q1)+  &
-0.8q1*beta**2*Cos(s)*Sin(s)))/(0.8q1*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**2)))/Pi+  &
-(beta*delta**2*(-(Cos(s/0.2q1)*Cos(s)*(Cos(s/0.2q1)*Sin(s/0.2q1)+  &
-0.8q1*beta**2*Cos(s)*Sin(s)))/(0.16q2*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**2)-((Sin(s/0.2q1)+  &
-Cos(s/0.2q1)*Sin(s))*(0.4q1*Cos(s/0.2q1)**4+  &
-0.8q2*beta**2*Cos(s/0.2q1)**2*Cos(s)**2+0.256q3*beta**4*Cos(s)**4+  &
-0.9q1*Cos(s/0.2q1)**2*Sin(s/0.2q1)**2-  &
-0.12q2*beta**2*Cos(s)**2*Sin(s/0.2q1)**2+  &
-0.192q3*beta**2*Cos(s/0.2q1)*Cos(s)*Sin(s/0.2q1)*Sin(s)-  &
-0.48q2*beta**2*Cos(s/0.2q1)**2*Sin(s)**2+  &
-0.576q3*beta**4*Cos(s)**2*Sin(s)**2))/(0.192q3*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**3)-(0.4q1*(-(Cos(s/0.2q1)*Sin(s))/0.128q3+  &
-(-Sin(s/0.2q1)-Cos(s/0.2q1)*Sin(s))/0.768q3))/(Cos(s/0.2q1)**2+  &
+val   = -(beta*(Sin(s/0.2d1)+Cos(s/0.2d1)*Sin(s)))/(0.4d1*Pi*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2))+  &
+(beta*delta*(-(Cos(s/0.2d1)*Cos(s))/(0.8d1*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2))-((Sin(s/0.2d1)+  &
+Cos(s/0.2d1)*Sin(s))*(Cos(s/0.2d1)*Sin(s/0.2d1)+  &
+0.8d1*beta**2*Cos(s)*Sin(s)))/(0.8d1*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**2)))/Pi+  &
+(beta*delta**2*(-(Cos(s/0.2d1)*Cos(s)*(Cos(s/0.2d1)*Sin(s/0.2d1)+  &
+0.8d1*beta**2*Cos(s)*Sin(s)))/(0.16d2*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**2)-((Sin(s/0.2d1)+  &
+Cos(s/0.2d1)*Sin(s))*(0.4d1*Cos(s/0.2d1)**4+  &
+0.8d2*beta**2*Cos(s/0.2d1)**2*Cos(s)**2+0.256d3*beta**4*Cos(s)**4+  &
+0.9d1*Cos(s/0.2d1)**2*Sin(s/0.2d1)**2-  &
+0.12d2*beta**2*Cos(s)**2*Sin(s/0.2d1)**2+  &
+0.192d3*beta**2*Cos(s/0.2d1)*Cos(s)*Sin(s/0.2d1)*Sin(s)-  &
+0.48d2*beta**2*Cos(s/0.2d1)**2*Sin(s)**2+  &
+0.576d3*beta**4*Cos(s)**2*Sin(s)**2))/(0.192d3*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**3)-(0.4d1*(-(Cos(s/0.2d1)*Sin(s))/0.128d3+  &
+(-Sin(s/0.2d1)-Cos(s/0.2d1)*Sin(s))/0.768d3))/(Cos(s/0.2d1)**2+  &
 4*beta**2*Cos(s)**2)))/Pi+  &
-(beta*delta**3*((Cos(s/0.2q1)*Cos(s))/(0.128q3*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2))-(Cos(s/0.2q1)*Cos(s)*(0.4q1*Cos(s/0.2q1)**4+&
-0.8q2*beta**2*Cos(s/0.2q1)**2*Cos(s)**2+0.256q3*beta**4*Cos(s)**4+  &
-0.9q1*Cos(s/0.2q1)**2*Sin(s/0.2q1)**2-  &
-0.12q2*beta**2*Cos(s)**2*Sin(s/0.2q1)**2+  &
-0.192q3*beta**2*Cos(s/0.2q1)*Cos(s)*Sin(s/0.2q1)*Sin(s)-  &
-0.48q2*beta**2*Cos(s/0.2q1)**2*Sin(s)**2+  &
-0.576q3*beta**4*Cos(s)**2*Sin(s)**2))/(0.384q3*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**3)-((Sin(s/0.2q1)+  &
-Cos(s/0.2q1)*Sin(s))*(0.5q1*Cos(s/0.2q1)**5*Sin(s/0.2q1)+  &
-0.136q3*beta**2*Cos(s/0.2q1)**3*Cos(s)**2*Sin(s/0.2q1)+  &
-0.464q3*beta**4*Cos(s/0.2q1)*Cos(s)**4*Sin(s/0.2q1)+  &
-0.6q1*Cos(s/0.2q1)**3*Sin(s/0.2q1)**3-  &
-0.24q2*beta**2*Cos(s/0.2q1)*Cos(s)**2*Sin(s/0.2q1)**3-  &
-0.32q2*beta**2*Cos(s/0.2q1)**4*Cos(s)*Sin(s)+  &
-0.512q3*beta**4*Cos(s/0.2q1)**2*Cos(s)**3*Sin(s)+  &
-0.256q4*beta**6*Cos(s)**5*Sin(s)+  &
-0.24q3*beta**2*Cos(s/0.2q1)**2*Cos(s)*Sin(s/0.2q1)**2*Sin(s)-  &
-0.192q3*beta**4*Cos(s)**3*Sin(s/0.2q1)**2*Sin(s)-  &
-0.96q2*beta**2*Cos(s/0.2q1)**3*Sin(s/0.2q1)*Sin(s)**2+  &
-0.192q4*beta**4*Cos(s/0.2q1)*Cos(s)**2*Sin(s/0.2q1)*Sin(s)**2-  &
-0.768q3*beta**4*Cos(s/0.2q1)**2*Cos(s)*Sin(s)**3+  &
-0.3072q4*beta**6*Cos(s)**3*Sin(s)**3))/(0.384q3*(Cos(s/0.2q1)**2+  &
-0.4q1*beta**2*Cos(s)**2)**4)-(0.2q1*(Cos(s/0.2q1)*Sin(s/0.2q1)+  &
-8*beta**2*Cos(s)*Sin(s))*(-(Cos(s/0.2q1)*Sin(s))/0.128q3+  &
-(-Sin(s/0.2q1)-Cos(s/0.2q1)*Sin(s))/0.768q3))/(Cos(s/0.2q1)**2+  &
+(beta*delta**3*((Cos(s/0.2d1)*Cos(s))/(0.128d3*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2))-(Cos(s/0.2d1)*Cos(s)*(0.4d1*Cos(s/0.2d1)**4+&
+0.8d2*beta**2*Cos(s/0.2d1)**2*Cos(s)**2+0.256d3*beta**4*Cos(s)**4+  &
+0.9d1*Cos(s/0.2d1)**2*Sin(s/0.2d1)**2-  &
+0.12d2*beta**2*Cos(s)**2*Sin(s/0.2d1)**2+  &
+0.192d3*beta**2*Cos(s/0.2d1)*Cos(s)*Sin(s/0.2d1)*Sin(s)-  &
+0.48d2*beta**2*Cos(s/0.2d1)**2*Sin(s)**2+  &
+0.576d3*beta**4*Cos(s)**2*Sin(s)**2))/(0.384d3*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**3)-((Sin(s/0.2d1)+  &
+Cos(s/0.2d1)*Sin(s))*(0.5d1*Cos(s/0.2d1)**5*Sin(s/0.2d1)+  &
+0.136d3*beta**2*Cos(s/0.2d1)**3*Cos(s)**2*Sin(s/0.2d1)+  &
+0.464d3*beta**4*Cos(s/0.2d1)*Cos(s)**4*Sin(s/0.2d1)+  &
+0.6d1*Cos(s/0.2d1)**3*Sin(s/0.2d1)**3-  &
+0.24d2*beta**2*Cos(s/0.2d1)*Cos(s)**2*Sin(s/0.2d1)**3-  &
+0.32d2*beta**2*Cos(s/0.2d1)**4*Cos(s)*Sin(s)+  &
+0.512d3*beta**4*Cos(s/0.2d1)**2*Cos(s)**3*Sin(s)+  &
+0.256d4*beta**6*Cos(s)**5*Sin(s)+  &
+0.24d3*beta**2*Cos(s/0.2d1)**2*Cos(s)*Sin(s/0.2d1)**2*Sin(s)-  &
+0.192d3*beta**4*Cos(s)**3*Sin(s/0.2d1)**2*Sin(s)-  &
+0.96d2*beta**2*Cos(s/0.2d1)**3*Sin(s/0.2d1)*Sin(s)**2+  &
+0.192d4*beta**4*Cos(s/0.2d1)*Cos(s)**2*Sin(s/0.2d1)*Sin(s)**2-  &
+0.768d3*beta**4*Cos(s/0.2d1)**2*Cos(s)*Sin(s)**3+  &
+0.3072d4*beta**6*Cos(s)**3*Sin(s)**3))/(0.384d3*(Cos(s/0.2d1)**2+  &
+0.4d1*beta**2*Cos(s)**2)**4)-(0.2d1*(Cos(s/0.2d1)*Sin(s/0.2d1)+  &
+8*beta**2*Cos(s)*Sin(s))*(-(Cos(s/0.2d1)*Sin(s))/0.128d3+  &
+(-Sin(s/0.2d1)-Cos(s/0.2d1)*Sin(s))/0.768d3))/(Cos(s/0.2d1)**2+  &
 4*beta**2*Cos(s)**2)**2))/Pi
 return
 endif
@@ -295,9 +295,9 @@ endif
 !  Otherwise
 !
 
-val = (-0.2q1*beta*(Sin(s/0.2q1)**3+Cos(s)*Sin(t/0.2q1))+  &
-beta*Cos(s/0.2q1)*Sin(t))/(0.4q1*Pi*((Sin(s/0.2q1)-  &
-0.1q1*Sin(t/0.2q1))**2+beta**2*(Sin(s)-0.1q1*Sin(t))**2))
+val = (-0.2d1*beta*(Sin(s/0.2d1)**3+Cos(s)*Sin(t/0.2d1))+  &
+beta*Cos(s/0.2d1)*Sin(t))/(0.4d1*Pi*((Sin(s/0.2d1)-  &
+0.1d1*Sin(t/0.2d1))**2+beta**2*(Sin(s)-0.1d1*Sin(t))**2))
 
 
 end subroutine
