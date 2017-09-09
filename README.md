@@ -67,7 +67,7 @@ There seems to be a great deal of confusion regarding these results,
 particularly the fact that the convergence of such methods was
 established decades ago.  The only issue is the efficiency
 with which the solutions are represented, not the convergence
-of discretizations of the conditioning of the resulting
+of discretizations or the conditioning of the resulting
 linear system.
 
 Arbitrarily high order algebraic convergence can be easily obtained
