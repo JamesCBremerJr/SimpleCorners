@@ -46,9 +46,9 @@ A weighted Nystrom scheme which is equivalent to a standard
 Galerkin discretization method is used to discretize (1) and (2).
 It differs from standard Nystrom schemes only in that the 
 matrices discretizing (1) and (2) are conjugated with a diagonal
-matrix whose entries consist of quadrature weights.  The resulting linear
-system is sufficiently small that it can be inverted with an LAPACK
-routine.
+matrix whose entries consist of square roots of quadrature weights.
+The resulting linear system is sufficiently small that it can be 
+inverted with an LAPACK routine.
 
 It is well-known that the operators 1/2I + K and 1/2I + K^* are
 isomorphisms which are compact perturbations of a coercive
