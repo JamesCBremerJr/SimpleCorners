@@ -18,6 +18,16 @@ where \Omega is a domain with a single corner point with angle
 specified by the user and D_\nu denotes the derivative with
 respect to the outward-pointing unit normal.
 
+The code for solving the Dirichlet problem can be compiled via the
+following command:
+    
+    gfortran -O3 dirichlet.f90 -llapack
+
+The code for the Neumann problem can be compiled via the following
+command:
+
+    gfortran -O3 neumann.f90 -llapack
+
 The Dirichlet problem is equivalent to the integral equation
 
     (1/2 I + K ) \sigma = f,                                   (1)
