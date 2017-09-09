@@ -50,18 +50,18 @@ matrix whose entries consist of square roots of quadrature weights.
 The resulting linear system is sufficiently small that it can be 
 inverted with an LAPACK routine.
 
-It is well-known that the operators 1/2I + K and 1/2I + K^* are
-isomorphisms which are compact perturbations of a coercive
-operators.  See, for instance,
+It is well-known that the operators 1/2I + K and 1/2I + K* are
+isomorphisms, each of  which is a compact perturbation of a coercive
+operator.  See, for instance,
 
       M. Costabel, "Boundary Integral Operators On Lipschitz Domains"
       SIAM Journal on Mathematical Analysis, 19 (1988), pg. 613-626.
 
-It follows that the Galerkin discretizations of the equations (1) and (2)
-converge.  Indeed, such  discretizations are "quasi-optimal," meaning
-that the error in the obtained solution is proportional to the error
-with which the discretization scheme approximates the true solution
-of the equation.
+That Galerkin methods for the discretization of (1) and
+(2) are effective follow from this observation.   Indeed, such discretizations 
+are "quasi-optimal," meaning that the error in the obtained solution
+is proportional to the error with which the discretization scheme 
+approximates the true solution of the equation.
 
 There seems to be a great deal of confusion regarding these results,
 particularly the fact that the convergence of such methods was
@@ -76,5 +76,9 @@ the primitive codes of this pacakage.  See, for instance,
 
   J. Bremer, V. Rokhlin and I. Sammis , "Universal quadratures for boundary 
   integral equations on two-dimensional domains with corners."
-  Journal of Computational Physics, 229 (2010), pp. 8259-8280.
+  Journal of Computational Physics, 229 (2010), pp. 8259-8280
 
+in which a procedure for the construction of efficient  methods for 
+the representation of  solutions of boundary value problems for
+elliptic partial differential equation on domains with corner
+points is described.
